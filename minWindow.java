@@ -10,9 +10,11 @@ public String minWindow(String s, String t) {
     int head = 0, tail = 0;
     int min = Integer.MAX_VALUE;
     while (end < s.length()) {
+
         if (map[s.charAt(end++)]-- > 0) {
             counter--;
         }
+        
         while (counter == 0) {
             if (end - begin < min) {
                 min = end - begin;
