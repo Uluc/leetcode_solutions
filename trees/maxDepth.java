@@ -1,6 +1,8 @@
 // Maximum Depth of Binary Tree 
 // https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
+//Solution from: https://leetcode.com/problems/maximum-depth-of-binary-tree/discuss/34216/Simple-solution-using-Java
+
 public int maxDepth(TreeNode root) {
     //1. If root is null, return 0
     if (root == null)
