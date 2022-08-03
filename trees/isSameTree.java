@@ -10,8 +10,7 @@ public boolean isSameTree(TreeNode p, TreeNode q) {
     //3. If p and q are not null, compare the values of p and q if equal, compare the left and right subtrees
     if(p.val == q.val)
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
-    else
     //4. If p and q are not null, if not equal trees must be different.
+    else
         return false;
-    
 }

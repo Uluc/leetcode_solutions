@@ -15,6 +15,7 @@ public String minWindow(String s, String t) {
             counter--;
         }
         
+        
         while (counter == 0) {
             if (end - begin < min) {
                 min = end - begin;

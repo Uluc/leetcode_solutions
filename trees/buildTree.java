@@ -15,7 +15,7 @@ public TreeNode buildTree(int[] preorder, int[] inorder) {
  * preorder: the preorder array
  * inorder: the inorder array
  */
-public TreeNode helper(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder) {
+private TreeNode helper(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder) {
     //1. If preOrder or inOrder starts surpass the end, return null.
     if (preStart > preorder.length - 1 || inStart > inEnd) {
         return null;

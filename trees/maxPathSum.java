@@ -1,5 +1,6 @@
 // max path sum in a binary tree leetcode
-// https://leetcode.com/problems/maximum-path-sum/
+//https://leetcode.com/problems/binary-tree-maximum-path-sum/
+
 
 //Solution from: https://leetcode.com/problems/binary-tree-maximum-path-sum/discuss/39875/Elegant-Java-solution
 

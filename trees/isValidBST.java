@@ -1,6 +1,9 @@
+//Is valid BST leetcode
+// https://leetcode.com/problems/validate-binary-search-tree/
+
 class Solution {
     //1.Keep a global variable to store last.
-    public Integer last = null;
+    private Integer last = null;
     
     //Method to check if BST is valid.
     public boolean isValidBST(TreeNode root) {
@@ -9,7 +12,7 @@ class Solution {
     }
     
     //Method to check if BST is valid. Also known as inorder sort.
-    public boolean checkBST(TreeNode root){
+    private boolean checkBST(TreeNode root){
         //1. If root is null, return true.
         if(root == null)
             return true;

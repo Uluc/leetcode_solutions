@@ -9,7 +9,8 @@ class Solution {
         return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
     }
   
-    public boolean dfs(TreeNode root, TreeNode subRoot) {
+    //Method to execute dfs on subtree.
+    private boolean dfs(TreeNode root, TreeNode subRoot) {
         //1. If both root and subroot are null, return true.
         if (root == null && subRoot == null) return true;
         //2. If either root or subroot is null, return false.

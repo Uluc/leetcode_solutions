@@ -3,6 +3,9 @@
 //Solution: https://leetcode.com/problems/word-search-ii/discuss/59780/Java-15ms-Easiest-Solution-(100.00)
 
 class Solution {
+
+    private static final char baseChar = 'a';
+    private static final int visited = '#'
    
     class TrieNode {
         //1. Declare the children of the node.
@@ -36,13 +39,13 @@ class Solution {
      * root: The root of the trie.
      * res: The list to store the result.
      */
-    public void dfs(char[][] board, int i, int j, TrieNode p, List<String> res) {
+    private void dfs(char[][] board, int i, int j, TrieNode p, List<String> res) {
         //1. Cache the character at index i,j.
         char c = board[i][j];
         //2. If the character is not present in the children of the current node, return.
-        if (c == '#' || p.next[c - 'a'] == null) return;
+        if (c == visited || p.next[c - baseChar] == null) return;
         //3. move the pointer to the child node.
-        p = p.next[c - 'a'];
+        p = p.next[c - baseChar];
         //4. If the word is found, add it to the result.
         if (p.word != null) { 
             res.add(p.word);
@@ -50,7 +53,7 @@ class Solution {
             p.word = null;     
         }
         //5. Mark the character as visited.
-        board[i][j] = '#';
+        board[i][j] = visited;
 
 
 
@@ -68,7 +71,7 @@ class Solution {
     }
 
     //Build the trie method to build the trie.
-    public TrieNode buildTrie(String[] words) {
+    private TrieNode buildTrie(String[] words) {
         //1. Declare a root node.
         TrieNode root = new TrieNode();
         //2. Iterate through the words.
@@ -78,7 +81,7 @@ class Solution {
             //3.2. Iterate through the word.
             for (char c : w.toCharArray()) {
                 //3.2.1 If the character is not present in the children of the current node, add it.
-                int i = c - 'a';
+                int i = c - baseChar;
                 if (p.next[i] == null) p.next[i] = new TrieNode();
                 //3.2.2 Move the pointer to the child node.
                 p = p.next[i];

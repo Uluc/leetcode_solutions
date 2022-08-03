@@ -3,7 +3,7 @@
 
 class Solution {
     //Global to store the kth smallest element
-    int remaining;
+    private int remaining;
     
     //Method to find the kth smallest element in a BST
     public int kthSmallest(TreeNode root, int k) {
